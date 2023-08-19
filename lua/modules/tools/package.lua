@@ -10,14 +10,12 @@ packadd({
 
 packadd({
   'nvimdev/template.nvim',
-  dev = true,
   cmd = 'Template',
   config = conf.template_nvim,
 })
 
 packadd({
   'nvimdev/guard.nvim',
-  dev = true,
   ft = { 'c', 'cpp', 'rust', 'lua', 'go', 'typescript', 'javascript', 'javascriptreact' },
   config = conf.guard,
 })
@@ -33,7 +31,6 @@ packadd({
 
 packadd({
   'nvimdev/dyninput.nvim',
-  dev = true,
   ft = { 'c', 'cpp', 'go', 'rust', 'lua' },
   config = conf.dyninput,
 })

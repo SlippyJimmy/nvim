@@ -60,7 +60,6 @@ end
 
 packadd({
   'neovim/nvim-lspconfig',
-  dev = true,
   ft = lsp_fts(),
   config = function()
     diag_config()
@@ -73,8 +72,7 @@ packadd({
 packadd({
   'nvimdev/lspsaga.nvim',
   ft = lsp_fts(),
-  dev = true,
-  config = function()
+  dev = true,  config = function()
     require('lspsaga').setup({
       symbol_in_winbar = {
         hide_keyword = true,
