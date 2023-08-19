@@ -72,7 +72,7 @@ packadd({
 packadd({
   'nvimdev/lspsaga.nvim',
   ft = lsp_fts(),
-  dev = true,  config = function()
+  config = function()
     require('lspsaga').setup({
       symbol_in_winbar = {
         hide_keyword = true,
