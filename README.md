@@ -11,22 +11,22 @@ nvim配置链接: [glepnir](https://github.com/glepnir/nvim)
 
 | 快捷键 | 描述                 | 备注     |
 | ------ | -------------------- | -------- |
-| j      | （连贯）向下移动光标 | 同gj     |
-| k      | （连贯）向上移动光标 | gk       |
-| <C-s>  | 保存                 |          |
-| <C-x>k | 关闭buffer           | bdelete? |
-| <C-n>  | 下一页               | bn       |
-| <C-p>  | 上一页               | bp       |
-| <C-q>  | 强制退出             |          |
+| j        | （连贯）向下移动光标 | 同gj     |
+| k        | （连贯）向上移动光标 | gk       |
+| `<C-s>`  | 保存                 |          |
+| `<C-x>k` | 关闭buffer           | bdelete? |
+| `<C-n>`  | 下一页               | bn       |
+| `<C-p>`  | 上一页               | bp       |
+| `<C-q>` | 强制退出             |          |
 | Y      | 复制到行尾,同        | y$       |
 
 - buffer
 
 | 快捷键 | 描述           |
 | ------ | -------------- |
-| <C-j>  | 列出所有buffer |
-| <C-x>k | 关闭buffer     |
-| <C-s>  | 保存           |
+| `<C-j>`  | 列出所有buffer |
+| `<C-x>k` | 关闭buffer     |
+| `<C-s>`  | 保存           |
 
 - window jump
   <C-h>
@@ -70,6 +70,16 @@ nvim配置链接: [glepnir](https://github.com/glepnir/nvim)
 | <A-j>  | 向下移动一行                 |交换位置     |
 | <C-k>  | 向下移动一行                 |交换位置     |
 
+1. Visual模式
+
+```
+af    # 全选函数代码块
+if    # 选择函数内部代码块
+ac    # 全选类代码块
+ic    # 选择类内代码块
+
+< or > 代码块缩进移动
+```
 
 
 1. Command模式
