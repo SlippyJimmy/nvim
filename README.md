@@ -98,7 +98,7 @@ nvim配置链接: [glepnir](https://github.com/glepnir/nvim)
 | <S-TAB> | I    | 上一项 |
 | <CR>    | I    | 确认   |
 
-//## Packer
+~~## Packer~~
 
 ```
 | `<C-o>/o`                 | open               | Open file/folder with default system application             |
@@ -106,7 +106,7 @@ nvim配置链接: [glepnir](https://github.com/glepnir/nvim)
 <leader>pi     PackerInstall
 ```
 
-## LSP
+~~## LSP~~
 
 ```
   <Leader>li  LspInfo
@@ -145,7 +145,7 @@ gs             signature_help,文档展示(括号处有用)
 <Leader>sl    SessionLoad
 ```
 
-## dadbodui
+~~## dadbodui~~
 
 ```
 //<Leader>d  DBUIToggle
@@ -165,7 +165,9 @@ gs             signature_help,文档展示(括号处有用)
   <Leader>fd Telescope dotfiles
 ```
 ## [flybuf.nvim](https://github.com/nvimdev/flybuf.nvim)
-  ['<Leader>j'] = cmd('FlyBuf'),
+```
+<Leader>j    #buffer快速跳转
+```
 
 ## gitsign
   [']g'] = cmd('lua require"gitsigns".next_hunk()<CR>'),
@@ -173,9 +175,7 @@ gs             signature_help,文档展示(括号处有用)
 
 ## [rapid.nvim](https://github.com/nvimdev/rapid.nvim)
 ```
-run (shell/build/run/make) commands on neovim
-
-<leader>c
+<leader>c    #run (shell/build/run/make) commands on neovim
 ```
 ## [telescope-file-browser](https://github.com/nvim-telescope/telescope-file-browser.nvim)文件管理
 
