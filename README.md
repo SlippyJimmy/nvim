@@ -171,8 +171,12 @@ gs             signature_help,文档展示(括号处有用)
   [']g'] = cmd('lua require"gitsigns".next_hunk()<CR>'),
   ['[g'] = cmd('lua require"gitsigns".prev_hunk()<CR>'),
 
-## rapid.nvim]
-  ['<leader>c'] = cmd('Rapid'),
+## [rapid.nvim](https://github.com/nvimdev/rapid.nvim)
+```
+run (shell/build/run/make) commands on neovim
+
+<leader>c
+```
 ## [telescope-file-browser](https://github.com/nvim-telescope/telescope-file-browser.nvim)文件管理
 
 <Leader>e  开闭文件菜单
