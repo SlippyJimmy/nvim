@@ -29,37 +29,43 @@ nvim配置链接: [glepnir](https://github.com/glepnir/nvim)
 | `<C-s>`  | 保存           |
 
 - window jump
+```
   <C-h>
   <C-l>
   <C-j>
   <C-k>
+```
 - resize window
-`gh`Lspsaga finder下`s`键进行左右切分
-  <A-[>    vertical resize -5
-  <A-]>    vertical resize +5
-  ]w          ?跳到下一个空白处
-  [w          ?跳到下一个空白处
+
+```
+gh       # 在Lspsaga finder下按s键进行左右切分
+<A-[>    # vertical resize -5
+<A-]>    # vertical resize +5
+
+```
+~~]w          ?跳到下一个空白处~~
+~~[w          ?跳到下一个空白处~~
 
 1. Insert模式
 
 | 快捷键 | 完整                         | 备注        |
 | ------ | ---------------------------- | ----------- |
-| <C-d>  | 删除光标前的词               | <C-o>diw    |
-| <C-b>  | 光标前移                     | <Left>      |
-| <C-f>  | 光标后移                     | <Right>     |
-| <C-a>  | 光标移动到行首               | <Esc>^i     |
-| <C-e>  | 光标移动到行尾               | <Esc>^i     |
-| <C-k>  | 删除到行尾                   | <C-o>d$     |
-| <C-w>  | 删除到行首                   | <C-[>diwa   |
-| <C-u>  | 删除到行首                   | <C-G>u<C-u> |
-| <C-s>  | 保存，并切换至Normal         | <ESC>:w<CR> |
-| <C-h>  | 退格删除-删除光标前的字符    | <Bs>        |
+| `<C-d>`  | 删除光标前的词               | <C-o>diw    |
+| `<C-b>`  | 光标前移                     | <Left>      |
+| `<C-f>`  | 光标后移                     | <Right>     |
+| `<C-a>`  | 光标移动到行首               | <Esc>^i     |
+| `<C-e>`  | 光标移动到行尾               | <Esc>^i     |
+| `<C-k>`  | 删除到行尾                   | <C-o>d$     |
+| `<C-w>`  | 删除到行首                   | <C-[>diwa   |
+| `<C-u>`  | 删除到行首                   | <C-G>u<C-u> |
+| `<C-s>`  | 保存，并切换至Normal         | <ESC>:w<CR> |
+| `<C-h>`  | 退格删除-删除光标前的字符    | <Bs>        |
 
 
 | 快捷键 | 完整                         | 备注        |
 | ------ | ---------------------------- | ----------- |
-| <C-j>  | 下一行                       | <Esc>o'     |
-| <C-k>  | 上一行                       | <Esc>O'     |
+| `<C-j>`  | 下一行                       | <Esc>o'     |
+| `<C-k>` | 上一行                       | <Esc>O'     |
 
 [use](https://github.com/neovim/neovim/issues/16416)
 `<C-c>`
@@ -67,8 +73,8 @@ nvim配置链接: [glepnir](https://github.com/glepnir/nvim)
 [Moving_lines_up_or_down](https://vim.fandom.com/wiki/Moving_lines_up_or_down)
 | 快捷键 | 完整                         | 备注        |
 | ------ | ---------------------------- | ----------- |
-| <A-j>  | 向下移动一行                 |交换位置     |
-| <C-k>  | 向下移动一行                 |交换位置     |
+| `<A-j>`  | 向下移动一行                 |交换位置     |
+| `<C-k>`  | 向下移动一行                 |交换位置     |
 
 1. Visual模式
 
@@ -85,12 +91,12 @@ ic    # 选择类内代码块
 1. Command模式
 
 ```
-  <C-b>     # 同Insert
-  <C-f>     # 同Insert
-  <C-a>     # 同Insert
-  <C-e>     # 同Insert
-  <C-d>     # 同Insert
-  <C-h>     # 同Insert
+<C-b>     # 同Insert
+<C-f>     # 同Insert
+<C-a>     # 同Insert
+<C-e>     # 同Insert
+<C-d>     # 同Insert
+<C-h>     # 同Insert
 ```
 
 1. Terminal模式
@@ -102,9 +108,9 @@ ic    # 选择类内代码块
 
 | 快捷键  | 模式 | 模式   |
 | ------- | ---- | ------ |
-| <TAB>   | I    | 下一项 |
-| <S-TAB> | I    | 上一项 |
-| <CR>    | I    | 确认   |
+| `<TAB>`   | I    | 下一项 |
+| `<S-TAB>` | I    | 上一项 |
+| `<CR>`    | I    | 确认   |
 
 ~~## Packer~~
 
@@ -178,8 +184,11 @@ gs             signature_help,文档展示(括号处有用)
 ```
 
 ## [gitsign](https://github.com/lewis6991/gitsigns.nvim)
-  [']g'] = cmd('lua require"gitsigns".next_hunk()<CR>'),
-  ['[g'] = cmd('lua require"gitsigns".prev_hunk()<CR>'),
+```
+]g    # gitsigns".next_hunk()
+[g    # gitsigns".prev_hunk()
+
+```
 
 ## [rapid.nvim](https://github.com/nvimdev/rapid.nvim)
 ```
@@ -187,7 +196,7 @@ gs             signature_help,文档展示(括号处有用)
 ```
 ## [telescope-file-browser](https://github.com/nvim-telescope/telescope-file-browser.nvim)文件管理
 
-<Leader>e  开闭文件菜单
+`<Leader>e`  开闭文件菜单
 
 | Insert / Normal           | fb_actions         | Description                                                  |
 | ------------------------- | ------------------ | ------------------------------------------------------------ |
@@ -205,9 +214,9 @@ gs             signature_help,文档展示(括号处有用)
 | `<C-t>/t`                 | change_cwd         | Change nvim's cwd to selected folder/file(parent)            |
 | `<C-f>/f`                 | toggle_browser     | Toggle between file and folder browser                       |
 | `<C-h>/h`                 | toggle_hidden      | Toggle hidden files/folders                                  |
-| <Leader>fo    oldfiles    |                    |                                                              |
-| <Leader>gc    git_commits |                    |                                                              |
-| <Leader>fd    dotfiles    |                    |                                                              |
+| `<Leader>fo`    |               oldfiles         |                                                              |
+| `<Leader>gc`    |         git_commits            |                                                              |
+| `<Leader>fd`    |       dotfiles                 |                                                              |
 
 ```
       file_browser = {
