@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # nvim快捷键
 
 nvim配置链接: [glepnir](https://github.com/glepnir/nvim)
@@ -296,3 +297,8 @@ textobject = 'gc',
 | [telescope-fzy-native.nvim](https://github.com/nvim-telescope/telescope-fzy-native.nvim)        | FZY风格排序器                                                                        |                                                                                                            |
 | [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)                              | Find, Filter, Preview, Pic                                        k(支持模糊查找)    |                                                                                                            |
 | [template.nvim](https://github.com/nvimdev/template.nvim)                                       | 在文件中快速插入模板                                                                 |                                                                                                            |
+=======
+**Text Editor just text editor Please dont't do no more**
+
+![QQ20240623-203745](https://github.com/glepnir/nvim/assets/41671631/5f849fa8-9c4d-4cb4-99e2-2dc21029cb4f)
+>>>>>>> 94381fec9281b8fcfcf3d7cccf60f5c2c19d5ca7

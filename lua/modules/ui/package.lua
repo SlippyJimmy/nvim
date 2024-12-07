@@ -1,24 +1,17 @@
 local conf = require('modules.ui.config')
 
 packadd({
-  'nvimdev/paradox.vim',
-  config = function()
-    vim.cmd('colorscheme paradox')
-  end,
-})
-
-packadd({
   'nvimdev/dashboard-nvim',
-  event = 'VimEnter',
+  event = 'UIEnter',
   config = conf.dashboard,
-  dependencies = { 'nvim-tree/nvim-web-devicons' },
 })
 
 packadd({
-  'nvimdev/whiskyline.nvim',
-  event = 'BufEnter */*',
-  config = conf.whisky,
-  dependencies = { 'nvim-tree/nvim-web-devicons' },
+  'nvimdev/modeline.nvim',
+  event = { 'BufReadPost */*', 'BufNewFile' },
+  config = function()
+    require('modeline').setup()
+  end,
 })
 
 packadd({
@@ -29,8 +22,11 @@ packadd({
 
 packadd({
   'nvimdev/indentmini.nvim',
-  event = 'BufEnter',
+  event = 'BufEnter */*',
   config = function()
-    require('indentmini').setup({})
+    vim.opt.listchars:append({ tab = '  ' })
+    require('indentmini').setup({
+      only_current = true,
+    })
   end,
 })

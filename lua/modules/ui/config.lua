@@ -1,9 +1,5 @@
 local config = {}
 
-function config.whisky()
-  require('whiskyline').setup()
-end
-
 function config.dashboard()
   local db = require('dashboard')
   db.setup({
@@ -13,36 +9,32 @@ function config.dashboard()
         enable = true,
       },
       project = {
-        enable = true,
+        enable = false,
       },
       disable_move = true,
       shortcut = {
         {
           desc = 'Update',
-          icon = ' ',
           group = 'Include',
           action = 'Lazy update',
           key = 'u',
         },
         {
-          icon = ' ',
           desc = 'Files',
           group = 'Function',
-          action = 'Telescope find_files find_command=rg,--ignore,--hidden,--files',
+          action = 'FzfLua files',
           key = 'f',
         },
         {
-          icon = ' ',
           desc = 'Apps',
           group = 'String',
           action = 'Telescope app',
           key = 'a',
         },
         {
-          icon = ' ',
-          desc = 'dotfiles',
+          desc = 'Configs',
           group = 'Constant',
-          action = 'Telescope dotfiles',
+          action = 'FzfLua files cwd=$HOME/.config',
           key = 'd',
         },
       },

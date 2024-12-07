@@ -1,26 +1,36 @@
-local g, api = vim.g, vim.api
---disable_distribution_plugins
-g.loaded_gzip = 1
-g.loaded_tar = 1
-g.loaded_tarPlugin = 1
-g.loaded_zip = 1
-g.loaded_zipPlugin = 1
-g.loaded_getscript = 1
-g.loaded_getscriptPlugin = 1
-g.loaded_vimball = 1
-g.loaded_vimballPlugin = 1
-g.loaded_matchit = 1
-g.loaded_matchparen = 1
-g.loaded_2html_plugin = 1
-g.loaded_logiPat = 1
-g.loaded_rrhelper = 1
-g.loaded_netrwPlugin = 1
-
-g.mapleader = ' '
-
-api.nvim_set_keymap('n', ' ', '', { noremap = true })
-api.nvim_set_keymap('x', ' ', '', { noremap = true })
-
 require('core.pack'):boot_strap()
 require('core.options')
-require('internal.event')
+
+-- read colorscheme from environment vairable COLORSCHEME
+if vim.env.COLORSCHEME then
+  vim.cmd.colorscheme(vim.env.COLORSCHEME)
+  return
+end
+
+if not vim.g.colors_name then
+  vim.cmd([[
+hi EndOfBuffer guifg=#14161b
+hi Function guifg=#a6dbff
+hi link @property @variable
+hi Type guifg=#fce094
+hi link @type.builtin Type
+hi link @type Type
+hi link Delimiter Comment
+
+hi DiagnosticUnderlineError guisp=#ffc0b9 cterm=undercurl gui=undercurl
+hi DiagnosticUnderlineWarn guisp=#fce094 cterm=undercurl gui=undercurl
+hi DiagnosticUnderlineInfo guisp=#8cf8f7 cterm=undercurl gui=undercurl
+hi DiagnosticUnderlineHint guisp=#a6dbff cterm=undercurl gui=undercurl
+hi DiagnosticUnderlineOk guisp=#b3f6c0 cterm=underline gui=underline
+
+hi IndentLine guifg=#2c2e33
+hi IndentLineCurrent guifg=#9b9ea4
+
+hi netrwTreeBar guifg=#2c2e33
+
+hi DashboardHeader guifg=#b3f6c0
+hi GitSignsAdd guifg=#005523
+hi GitSignsChange guifg=#007373
+hi GitSignsDelete guifg=#590008
+]])
+end

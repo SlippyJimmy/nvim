@@ -1,4 +1,3 @@
---based on @ii14 version
 local set_keymap = vim.api.nvim_set_keymap
 local buf_set_keymap = vim.api.nvim_buf_set_keymap
 
@@ -85,7 +84,7 @@ local function index(self, key)
 
   if key == 'cmd' then
     local cmd_fn = function(str)
-      return '<cmd>' .. str .. '<CR>'
+      return '<Cmd>' .. str .. '<CR>'
     end
     rawset(self, key, cmd_fn)
     return cmd_fn
@@ -126,7 +125,7 @@ local function index(self, key)
     if not opts.buf then
       map = set_keymap
     else
-      map = buf_map(opts.buf)
+      map = buf_map(opts.buf == true and 0 or opts.buf)
       opts.buf = nil
     end
 
@@ -162,6 +161,7 @@ local function index(self, key)
         end
 
         for mode in pairs(modes) do
+          -- print(vim.inspect(opts))
           map(mode, lhs, rhs, opts)
         end
       end
@@ -201,7 +201,7 @@ end
 ---```
 ---- Attributes
 ---```lua
----  map.n('e', ':e<CR>', { buffer=0, remap=true })
+---  map.n('e', ':e<CR>', { buf=0, remap=true })
 ---```
 ---- Lua function
 ---```lua
